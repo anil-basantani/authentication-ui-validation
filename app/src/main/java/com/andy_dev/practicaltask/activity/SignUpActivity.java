@@ -20,11 +20,7 @@ import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import static com.andy_dev.practicaltask.utils.Utility.hideKeyboard;
-import static com.andy_dev.practicaltask.utils.Utility.showSnackBar;
-import static com.andy_dev.practicaltask.utils.Utility.spannableClickText;
-import static com.andy_dev.practicaltask.utils.Utility.validEmail;
-import static com.andy_dev.practicaltask.utils.Utility.validPassword;
+import static com.andy_dev.practicaltask.utils.Utility.*;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
