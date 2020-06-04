@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handleClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        tools:context=".activity.SignInActivity">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_android"
+            app:layout_constraintBottom_toTopOf="@+id/content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="0.35" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_cover"
+            app:layout_constraintVertical_weight="0.65">
+
+            <TextView
+                style="@style/header_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="@string/sign_in"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/user_name"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password" />
+
+            <TextView
+                android:id="@+id/txt_sign_in"
+                style="@style/btn_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:onClick="@{handleClick::onClick}"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/sign_in" />
+
+            <TextView
+                android:id="@+id/txt_sign_up"
+                style="@style/regular_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
+                android:onClick="@{handleClick::onClick}"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/dont_have_an_account"
+                android:textColor="@color/fields_color" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

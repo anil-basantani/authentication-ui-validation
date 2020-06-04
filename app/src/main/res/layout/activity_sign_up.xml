@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handleClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".activity.SignUpActivity">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/header_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/sign_up"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_user_name"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/user_name_digits"
+                android:hint="@string/user_name" />
+
+            <EditText
+                android:id="@+id/et_full_name"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/name_digits"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName|textCapWords" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/et_address"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/et_city"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/alphabets_only"
+                android:hint="@string/city"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/et_state"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/alphabets_only"
+                android:hint="@string/state"
+                android:inputType="textCapSentences" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_country"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password" />
+
+            <EditText
+                android:id="@+id/et_verify_password"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/re_enter_password" />
+
+            <TextView
+                android:id="@+id/txt_sign_up"
+                style="@style/btn_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:onClick="@{handleClick::onClick}"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/sign_up" />
+
+            <TextView
+                android:id="@+id/txt_sign_in"
+                style="@style/regular_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
+                android:onClick="@{handleClick::onClick}"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/have_an_account"
+                android:textColor="@color/fields_color" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

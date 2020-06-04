@@ -1,11 +1,62 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="btn_style">
+        <item name="android:elevation">@dimen/_4sdp</item>
+        <item name="android:background">@drawable/bg_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="header_text_style">
+        <item name="android:gravity">start</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="regular_text_style">
+        <item name="android:gravity">start</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:overlapAnchor">false</item>
+    </style>
 </resources>
